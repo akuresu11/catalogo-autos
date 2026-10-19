@@ -65,6 +65,13 @@ app.get("/autos/:id", (req, res) => {
   res.json(auto);
 });
 
+app.use((req, res) => {
+  res.status(404).json({
+    error: "Ruta no encontrada",
+    ruta: req.originalUrl
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, "0.0.0.0", () => {
