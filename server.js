@@ -42,6 +42,10 @@ app.get("/autos", (req, res) => {
   res.json(autos);
 });
 
+app.get("/prueba", (req, res) => {
+  res.json({ mensaje: "La ruta de prueba funciona" });
+});
+
 app.get("/autos/:id", (req, res) => {
   const auto = autos.find(
     a => a.id === Number(req.params.id)
