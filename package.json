@@ -1,0 +1,13 @@
+
+{
+  "name": "catalogo-autos",
+  "version": "1.0.0",
+  "description": "Microservicio REST para consultar un catalogo de autos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
