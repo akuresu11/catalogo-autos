@@ -4,6 +4,11 @@ const app = express();
 
 app.use(express.json());
 
+app.use((req, res, next) => {
+  console.log("Solicitud recibida:", req.method, req.originalUrl);
+  next();
+});
+
 const autos = [
   {
     id: 1,
